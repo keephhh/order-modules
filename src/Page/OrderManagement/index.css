@@ -1,0 +1,115 @@
+.App {
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+.order-module {
+  height: 820px;
+  width: 100%;
+  min-width: 1396px;
+  background-color: #f0f0f0;
+}
+.order-module:after {
+  overflow: hidden;
+}
+
+  /*
+  form-message
+  */
+.form-message {
+  min-width: 1200px;
+  width: 85%;
+  height: 200px;
+  margin-left: 14%;
+  margin-top: 15px;
+  background: #FFFFFF;
+  padding: 15px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+  border-radius: 2px;
+}
+.float-message {
+  display: inline-block;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-right: 60px;
+}
+
+.search-record .ant-menu-horizontal {
+  background-color: white;
+  color: #333333;
+}
+/*
+1111
+*/
+.selector {
+  margin-right: 0;
+}
+
+.ant-btn-primary:hover, .ant-btn-primary:focus {
+  background-color: #C8A377;
+  color: #FFFFFF;
+}
+.ant-btn:hover {
+  color: #C8A377;
+}
+.ant-btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 500;
+  text-align: center;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  line-height: 1.15;
+  padding: 2px 35px;
+  font-size: 12px;
+  border-radius: 4px;
+  height: 28px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: relative;
+  color: #C8A377;
+  border-color: #C8A377;
+}
+.ant-btn-primary {
+  color: #fff;
+  background-color: #C8A377;
+  border-color: #1DA57A;
+  border-radius: 2px;
+}
+
+/*
+  search-record
+*/
+.search-record {
+  min-width: 1200px;
+  width: 85%;
+  height: 34px;
+  height: 62%;
+  background: #FFFFFF;
+  border-radius: 2px 2px 0 0;
+  margin-left: 14%;
+  margin-top: 15px;
+}
+.search-record-title {
+  display: block;
+  font-family: PingFangSC-Semibold;
+  font-size: 14px;
+  color: #333333;
+  letter-spacing: 0;
+  line-height: 34px;
+  padding-left: 20px;
+  background: #FAFAFA;
+  border-radius: 2px 2px 0 0;
+  width: 100%;
+}

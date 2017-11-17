@@ -1,0 +1,49 @@
+.head-navigation {
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    background: #181818;
+}
+.clearfiex {
+    overflow: hidden;
+}
+.ant-menu-horizontal {
+    background-color: #181818;
+    color: #FFFFFF;
+}
+.ant-menu-horizontal > .ant-menu-item:hover, .ant-menu-horizontal > .ant-menu-submenu:hover, .ant-menu-horizontal > .ant-menu-item-active, .ant-menu-horizontal > .ant-menu-submenu-active, .ant-menu-horizontal > .ant-menu-item-open, .ant-menu-horizontal > .ant-menu-submenu-open, .ant-menu-horizontal > .ant-menu-item-selected, .ant-menu-horizontal > .ant-menu-submenu-selected {
+    border-bottom: 2px solid #EAC694;
+    color: #EAC694;
+}
+.avatar-message, .extra-message-box {
+    display: none;
+}
+.extra-message {
+    float: right;
+    padding-right: 20px;
+    display: flex;
+}
+
+.extra-message-avatar {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+.icon-daochu {
+    font-family: "iconfont";
+    font-size: 1.286667rem;
+    font-style: normal;
+    color: #EAC694;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.extra-message-span {
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #757575;
+    letter-spacing: 0;
+    line-height: 16px;
+}
+
+

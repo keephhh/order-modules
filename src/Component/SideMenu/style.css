@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'iconfont';  /* project id 473128 */
-    src: url('//at.alicdn.com/t/font_473128_lvj6ke8mcwuyp66r.eot');
-    src: url('//at.alicdn.com/t/font_473128_lvj6ke8mcwuyp66r.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_473128_lvj6ke8mcwuyp66r.woff') format('woff'),
-    url('//at.alicdn.com/t/font_473128_lvj6ke8mcwuyp66r.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_473128_lvj6ke8mcwuyp66r.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_473128_f71l174fxndpwrk9.eot');
+    src: url('//at.alicdn.com/t/font_473128_f71l174fxndpwrk9.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_473128_f71l174fxndpwrk9.woff') format('woff'),
+    url('//at.alicdn.com/t/font_473128_f71l174fxndpwrk9.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_473128_f71l174fxndpwrk9.svg#iconfont') format('svg');
 }
 .icon-long{
     font-family: "iconfont";
@@ -12,6 +12,29 @@
     font-style: normal;
     color: #EAC694;
     float: left;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.order-message {
+    background: #181818;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.30);
+    color: #EAC694;
+    margin-bottom: 10px;
+}
+.order-right {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 15px;
+    padding-top: 16px;
+}
+
+.order-name {
+    font-size: 14px;
+}
+.order-post {
+    font-size: 10px;
 }
 .order-message:after {
     content: "";
@@ -19,7 +42,49 @@
     clear: both;
 }
 .search-left {
-    width: 15%;
+    float: left;
+    width:13%;
+    min-width: 140px;
+    opacity: 1;
+    background: #333333;
+    height: 100%;
 }
+.ant-collapse-content {
+    padding: 0 0;
+    line-height: 30px;
+}
+.ant-collapse-content > .ant-collapse-content-box {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #454440;
+    color: #ffffff;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    background: #333333;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: 12px;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .arrow {
+    right: 0;
+    bottom: 3px;
+    left: 85%;
+    color: #ffffff;
+}
+.ant-collapse, .ant-collapse > .ant-collapse-item{
+    border: none;
+}
+.order {
+    padding-left: 20px;
+}
+
 
 
