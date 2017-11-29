@@ -1,0 +1,10 @@
+.widget-descript>button {
+    width: 92%;
+    background: #C8A377;
+    box-shadow: 0 2px 2px 0 rgba(200,163,119,0.30);
+    border-radius: 2px;
+    color: #FFFFFF;
+    font-family: PingFangSC-Semibold;
+    font-size: 14px;
+    letter-spacing: 0;
+}

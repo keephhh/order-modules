@@ -24,11 +24,14 @@ export function asyncAction(url, beginAction, finishAction) {
     return function (dispatch) {
         dispatch(beginAction());
         return fetchWithParams(url).then(response => response.json()).then(response => {
-            if (response.data.page_list) {
-                dispatch(finishAction(response.data.page_list));
+            if (response.data) {
+                dispatch(finishAction(response.data));
+
             } else {
                 console.log("failed: " + response.msg);
             }
         })
     }
 }
+
+

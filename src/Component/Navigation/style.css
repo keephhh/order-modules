@@ -1,0 +1,27 @@
+.navigation-message {
+    min-width: 1200px;
+    width: 85%;
+    height: 35px;
+    margin-left: 2%;
+    margin-top: 15px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+    border-radius: 2px;
+    line-height: 35px;
+    padding-left: 20px;
+}
+.export_button {
+    float: right;
+    margin-right: 20px;
+}
+.export_button> .ant-btn-primary {
+    width: 55px;
+    padding-left: 15px;
+    height: 24px;
+}
+.ant-btn:hover {
+     color: #C8A377!important;
+}
+.ant-btn-primary:hover {
+    color: #FFFFFF!important;
+}

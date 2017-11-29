@@ -1,31 +1,25 @@
 import React, { Component } from 'react';
-import Module from '../Extra/Extra'
 import { Menu } from 'antd';
+import Extra from '../../../Component/Extra/Extra'
+import {connect} from 'react-redux'
 
+import './style.css'
 
 
 class Head extends Component {
-    constructor () {
+    constructor() {
         super()
-        this.state = {
-            current: '',
-        }
     }
-    handleClick = (e) => {
-        this.setState({
-            current: e.key,
-        });
-        this.props.changeModule(e)
-    }
-    render() {
 
-        const { focus, others ,active} = this.props;
+
+    render() {
+        const { focus, others ,active, account} = this.props;
         return (
             <div className="clearfiex">
                 <div className="head-navigation">
                     <Menu
-                        onClick={this.handleClick}
-                        selectedKeys={[this.state.current]}
+                        onClick={this.props.handleSearch}
+                        selectedKeys={[this.props.current]}
                         mode="horizontal"
                     >
                         <Menu.Item key="mail">
@@ -37,11 +31,15 @@ class Head extends Component {
                                     {other}
                                 </Menu.Item >)
                         }
-                        <Module  status={active} />
+                        <Extra  status={active}
+                                number={account}
+                        />
                     </Menu>
                 </div>
             </div>
         );
     }
 }
-export default Head;
+
+
+export default connect()(Head);

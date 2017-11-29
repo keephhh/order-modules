@@ -1,0 +1,114 @@
+.login-wrapper {
+    /*position: relative;*/
+    background: url("../../images/login-bg.jpg")no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size:100% 100%;
+    text-align: center;
+}
+.login-box {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 320px;
+    height: 267px;
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.50);
+    border-radius: 4px;
+}
+.login-header {
+    margin: auto 5px;
+    padding: 10px auto;
+    border-bottom: 1px solid #F4F3F4;
+}
+.login-header>img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 45%;
+    height: 45%;
+}
+.login-flex {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.login-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-input{
+    padding-left: 10px;
+    width: 220px;
+    height: 32px;
+    background: #FFFFFF;
+    border: 1px solid #D2D2D2;
+    border-radius: 28px;
+}
+.login-button-area {
+    width: 100%;
+}
+.login-button {
+    width: 270px;
+    height: 32px;
+    background: #C8A377;
+    border-radius: 27px;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    outline: none;
+}
+.login-option-area {
+    display: flex;
+    width: 220px;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.login-option {
+    margin-top: 8px!important;
+    margin-bottom: 5px;
+}
+.login-option-item {
+    font-size: 10px;
+    letter-spacing: 0;
+    line-height: 12px;
+    -webkit-text-size-adjust:none;
+
+}
+.login-option-selectd {
+    display: block;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    background-color:#C8A377;
+    margin-right: 5px;
+}
+.login-option-selectd:after {
+    display: block;
+    padding-left: 3px;
+    content: '';
+    width: 10px;
+    height: 8px;
+    transform: rotate(-45deg);
+    border-left: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+.login-option-select {
+    display: block;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    border: 1px solid #808080;
+}
+.flex-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-color {
+    color: #55AEE5;
+}

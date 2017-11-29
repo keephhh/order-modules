@@ -7,12 +7,16 @@ class Form extends Component {
     constructor(props, context) {
         super(props, context);
     }
-
     render() {
-        const { name } = this.props;
+        const { name, value, refType } = this.props;
         return (
             <div>
-                {name}：<Input />
+                {name}：
+                <Input
+                    value={value}
+                    onChange={this.props.handleChange}
+                    ref={refType}
+                />
             </div>
         );
     }

@@ -30,6 +30,7 @@
     "babel-loader": "^7.1.2",
     "css-loader": "^0.28.7",
     "less": "^2.7.3",
-    "less-loader": "^4.0.5"
+    "less-loader": "^4.0.5",
+    "remote-redux-devtools": "^0.5.12"
   }
 }

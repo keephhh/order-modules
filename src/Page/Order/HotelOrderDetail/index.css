@@ -1,0 +1,100 @@
+.box-flex {
+    display: flex;
+}
+
+.flight-line {
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.flight-detail-box {
+    min-width: 700px;
+    width: 58%;
+    margin-left: 2%;
+    margin-top: 15px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+    border-radius: 2px;
+    line-height: 28px;
+    font-size: 14px;
+    padding-bottom: 15px;
+}
+.widget {
+    width: 26.5%;
+    height: 100%;
+    background: #FFFFFF;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.flight-detail-header {
+    display: block;
+    width: 100%;
+    background: #FAFAFA;
+    border-radius: 2px;
+    line-height: 35px;
+    padding-left: 20px;
+    font-family: PingFangSC-Semibold;
+    font-size: 14px;
+    color: #333333;
+    letter-spacing: 0;
+}
+.flight-detail-content {
+    padding: 10px 20px;
+    background: #FFFFFF;
+}
+.margintop {
+    padding-top: 10px;
+}
+.account-flex-box {
+    display: flex;
+}
+
+
+
+.account-flex-extra {
+    opacity: .6;
+    font-family: PingFangSC-Regular;
+    font-size: 11px;
+    color: #757575;
+    letter-spacing: 0;
+    line-height: 21px;
+    padding-bottom: 6px;
+}
+.account-flex-des {
+    display: flex;
+    justify-content: space-between;
+}
+.account-flex-des > label {
+    margin-right: 50px;
+}
+
+/*
+flight-log-box
+*/
+.flight-log-box {
+    margin-top: 20px;
+    min-width: 700px;
+    width: 100%;
+    margin-top: 15px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+    border-radius: 2px;
+    line-height: 28px;
+    font-size: 14px;
+    padding-bottom: 15px;
+}
+.marginleft {
+    padding-left: 20px;
+}
+
+.widget-descript {
+    margin-left: 20px;
+    line-height: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.widget>span>label {
+    color: blue;
+    display: inline-block;
+    margin-right: 20px;
+}

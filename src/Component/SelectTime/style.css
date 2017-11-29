@@ -1,3 +1,14 @@
 .ant-calendar-picker-icon:after {
     content: '';
 }
+.ant-calendar-picker-input {
+    outline: none;
+    display: block;
+    width: 150px;
+}
+.ant-calendar-picker {
+    margin-left: 5px;
+}
+.brige {
+    padding-left: 12px;
+}

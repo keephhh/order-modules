@@ -62,6 +62,7 @@ class DateRange extends Component {
                     onChange={this.onStartChange}
                     onOpenChange={this.handleStartOpenChange}
                 />
+                <label className="brige"> -- </label>
                 <DatePicker
                     disabledDate={this.disabledEndDate}
                     showTime

@@ -5,12 +5,12 @@
   box-sizing: border-box;
 }
 .order-module {
-  height: 820px;
+  min-height: 870px;
+  height: 100%;
   width: 100%;
-  min-width: 1396px;
   background-color: #f0f0f0;
 }
-.order-module:after {
+.order-module:before {
   overflow: hidden;
 }
 
@@ -21,7 +21,7 @@
   min-width: 1200px;
   width: 85%;
   height: 200px;
-  margin-left: 14%;
+  margin-left: 2%;
   margin-top: 15px;
   background: #FFFFFF;
   padding: 15px;
@@ -35,6 +35,8 @@
   margin-top: 10px;
   margin-right: 60px;
 }
+
+
 
 .search-record .ant-menu-horizontal {
   background-color: white;
@@ -94,11 +96,10 @@
 .search-record {
   min-width: 1200px;
   width: 85%;
-  height: 34px;
   height: 62%;
   background: #FFFFFF;
   border-radius: 2px 2px 0 0;
-  margin-left: 14%;
+  margin-left: 2%;
   margin-top: 15px;
 }
 .search-record-title {
@@ -113,3 +114,10 @@
   border-radius: 2px 2px 0 0;
   width: 100%;
 }
+.search-input {
+  width: 240px;
+  height: 30px;
+}
+
+
+

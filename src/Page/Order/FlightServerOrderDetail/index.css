@@ -1,0 +1,40 @@
+.input_box, .area_box {
+    width: 92%;
+    background: #FFFFFF;
+    border: 1px solid #C3C3C3;
+    display: flex;
+    margin-bottom: 20px;
+}
+.input_box> span {
+    padding-left: 10px;
+}
+.input_box> input {
+    border: none;
+    flex: 1;
+    padding-left: 20px;
+}
+.area_box {
+    height: 200px;
+}
+.area_box>textarea {
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    letter-spacing: 0;
+    padding: 5px 10px;
+}
+input{
+    outline: none;
+    padding-left: 3px;
+}
+textarea {
+    outline: none;
+}
+input::-webkit-input-placeholder {
+    font-size: 14px;
+    color: #C3C3C3;
+}
+textarea::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 14px;
+    color: #C3C3C3;
+}

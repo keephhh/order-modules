@@ -6,45 +6,23 @@
     url('//at.alicdn.com/t/font_473128_f71l174fxndpwrk9.ttf') format('truetype'),
     url('//at.alicdn.com/t/font_473128_f71l174fxndpwrk9.svg#iconfont') format('svg');
 }
-.icon-long{
-    font-family: "iconfont";
-    font-size: 2.286667rem;
-    font-style: normal;
-    color: #EAC694;
-    float: left;
-    margin-left: 15px;
-    margin-top: 10px;
-}
 .order-message {
     background: #181818;
     box-shadow: 0 4px 5px 0 rgba(0,0,0,0.30);
     color: #EAC694;
-    margin-bottom: 10px;
+    padding: auto 10%;
+    height: 47px;
+
 }
-.order-right {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    flex-direction: column;
-    margin-right: 15px;
-    padding-top: 16px;
+.order-message>img {
+    height: 100%;
+    width: 80%;
 }
 
-.order-name {
-    font-size: 14px;
-}
-.order-post {
-    font-size: 10px;
-}
-.order-message:after {
-    content: "";
-    display: block;
-    clear: both;
-}
+
 .search-left {
-    float: left;
     width:13%;
-    min-width: 140px;
+    min-width: 180px;
     opacity: 1;
     background: #333333;
     height: 100%;
@@ -84,6 +62,9 @@
 }
 .order {
     padding-left: 20px;
+}
+.isActive {
+    color: #EAC694;
 }
 
 
