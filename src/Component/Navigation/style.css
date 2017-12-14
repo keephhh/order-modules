@@ -12,16 +12,18 @@
 }
 .export_button {
     float: right;
+    margin-right: 10px;
+}
+.export_button:nth-child(1) {
     margin-right: 20px;
 }
-.export_button> .ant-btn-primary {
-    width: 55px;
-    padding-left: 15px;
+.exportButton {
+    width: 60px;
     height: 24px;
-}
-.ant-btn:hover {
-     color: #C8A377!important;
-}
-.ant-btn-primary:hover {
-    color: #FFFFFF!important;
+    background-color: #C8A377;
+    border-radius: 2px;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 24px;
 }

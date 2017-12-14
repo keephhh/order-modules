@@ -12,14 +12,15 @@ class SideMenu extends Component {
     constructor (context) {
         super(context)
         this.state = {
-            status: localStorage.getItem('status')
+            status: localStorage.getItem('status'),
         }
+
         this.handleClick = this.handleClick.bind(this)
     }
-    componentWillMount() {
-        localStorage.setItem('status', 'sale')
-    }
-     callback(key) {
+
+
+
+    callback(key) {
     }
     handleClick(route) {
         localStorage.setItem('status', route)
@@ -48,6 +49,12 @@ class SideMenu extends Component {
                     status: localStorage.getItem('status')
                 })
                 break;
+            case 'client':
+                browserHistory.push('/client')
+                this.setState({
+                    status: localStorage.getItem('status')
+                })
+                break;
             case 'error':
                 browserHistory.push('/error')
                 break;
@@ -55,7 +62,7 @@ class SideMenu extends Component {
 
     }
     render() {
-        const { isModule } = this.props
+        const {isModule} = this.props
         return (
             <div>
                 {
@@ -110,39 +117,40 @@ class SideMenu extends Component {
                             <div className="order-message">
                                 <img src={require("../../../images/logo.png")} alt=""/>
                             </div>
+                            <div className="client-message" onClick={() => {this.handleClick("client")}}>
+                                商户信息
+                            </div>
                             <div className="sidemenu-order">
-                                <Collapse defaultActiveKey={['1']} onChange={this.callback()}>
-                                    <Panel header="酒店订单" key="1">
+                                <Collapse onChange={this.callback()}>
+                                    <Panel header="售前管理" key="1">
                                         <div className="sale order"
-                                             onClick={() => {this.handleClick("sale")}}
-                                        >
-                        <span className={(this.state.status == "sale" ? "isActive" : "")}>
-                            合作商户
-                        </span>
+                                             onClick={() => {this.handleClick("error")}}>
+                                            <span className={(this.state.status == "error" ? "isActive" : "")}>
+                                                CRM
+                                            </span>
                                         </div>
                                         <div className="server order"
-                                             onClick={() => {this.handleClick("hotelserver")}}
-                                        >
+                                             onClick={() => {this.handleClick("hotelserver")}}>
                                             <i className="icon-people"></i>
                                             <span className={(this.state.status == "hotelserver" ? "isActive" : "")}>
-                            合作商户哈哈
-                        </span>
+                                                CRM哈哈
+                                            </span>
                                         </div>
                                     </Panel>
-                                    <Panel header="机票订单" key="2">
+                                    <Panel header="代理销售" key="2">
                                         <div className="hotel order"
                                              onClick={() => {this.handleClick("flight")}} >
                                             <i className="icon-pic"></i>
                                             <span className={(this.state.status == "flight" ? "isActive" : "")}>
-                            再来一次
-                        </span>
+                                                再来一次
+                                            </span>
                                         </div>
                                         <div className="hotel order"
                                              onClick={() => {this.handleClick("flightserver")}} >
                                             <i className="icon-pic"></i>
                                             <span className={(this.state.status == "flightserver" ? "isActive" : "")}>
-                            1凡凡阿萨
-                        </span>
+                                                12阿萨
+                                            </span>
                                         </div>
                                     </Panel>
                                 </Collapse>
@@ -156,39 +164,48 @@ class SideMenu extends Component {
                             <div className="order-message">
                                 <img src={require("../../../images/logo.png")} alt=""/>
                             </div>
+                            <div className="client-message" onClick={() => {this.handleClick("client")}}>
+                                客户信息
+                            </div>
                             <div className="sidemenu-order">
-                                <Collapse defaultActiveKey={['1']} onChange={this.callback()}>
-                                    <Panel header="酒店订单" key="1">
-                                        <div className="sale order"
-                                             onClick={() => {this.handleClick("sale")}}
-                                        >
-                        <span className={(this.state.status == "sale" ? "isActive" : "")}>
-                            CRM
-                        </span>
+                                <Collapse onChange={this.callback()}>
+                                    <Panel header="售前管理" key="1">
+                                        <div className="sale order">
+                                            <span>
+                                                CRM
+                                            </span>
                                         </div>
-                                        <div className="server order"
-                                             onClick={() => {this.handleClick("hotelserver")}}
-                                        >
+                                        <div className="server order">
                                             <i className="icon-people"></i>
-                                            <span className={(this.state.status == "hotelserver" ? "isActive" : "")}>
-                            CRM哈哈
-                        </span>
+                                            <span>
+                                                哈哈
+                                            </span>
                                         </div>
                                     </Panel>
-                                    <Panel header="机票订单" key="2">
-                                        <div className="hotel order"
-                                             onClick={() => {this.handleClick("flight")}} >
+                                    <Panel header="代理销售" key="2">
+                                        <div className="hotel order">
                                             <i className="icon-pic"></i>
-                                            <span className={(this.state.status == "flight" ? "isActive" : "")}>
-                            再来一次
-                        </span>
+                                            <span>
+                                                再来一次
+                                            </span>
                                         </div>
-                                        <div className="hotel order"
-                                             onClick={() => {this.handleClick("flightserver")}} >
+                                        <div className="hotel order">
                                             <i className="icon-pic"></i>
-                                            <span className={(this.state.status == "flightserver" ? "isActive" : "")}>
-                            12阿萨
-                        </span>
+                                            <span>
+                                                12阿萨
+                                            </span>
+                                        </div>
+                                    </Panel>
+                                    <Panel header="转码记录管理" key="3">
+                                        <div className="sale order">
+                                            <span>
+                                                ABC
+                                            </span>
+                                        </div>
+                                        <div className="server order">
+                                            <span>
+                                                珏净空
+                                            </span>
                                         </div>
                                     </Panel>
                                 </Collapse>
@@ -202,39 +219,40 @@ class SideMenu extends Component {
                             <div className="order-message">
                                 <img src={require("../../../images/logo.png")} alt=""/>
                             </div>
+                            <div className="client-message" onClick={() => {this.handleClick("client")}}>
+                                运营客商
+                            </div>
                             <div className="sidemenu-order">
-                                <Collapse defaultActiveKey={['1']} onChange={this.callback()}>
-                                    <Panel header="酒店订单" key="1">
+                                <Collapse onChange={this.callback()}>
+                                    <Panel header="售前管理" key="1">
                                         <div className="sale order"
-                                             onClick={() => {this.handleClick("sale")}}
-                                        >
-                        <span className={(this.state.status == "sale" ? "isActive" : "")}>
-                            内容运营
-                        </span>
+                                             onClick={() => {this.handleClick("error")}}>
+                                            <span className={(this.state.status == "error" ? "isActive" : "")}>
+                                                ABC
+                                            </span>
                                         </div>
                                         <div className="server order"
-                                             onClick={() => {this.handleClick("hotelserver")}}
-                                        >
+                                             onClick={() => {this.handleClick("hotelserver")}}>
                                             <i className="icon-people"></i>
                                             <span className={(this.state.status == "hotelserver" ? "isActive" : "")}>
-                            内容运营哈哈
-                        </span>
+                                                SKT
+                                            </span>
                                         </div>
                                     </Panel>
-                                    <Panel header="机票订单" key="2">
+                                    <Panel header="运营销售" key="2">
                                         <div className="hotel order"
                                              onClick={() => {this.handleClick("flight")}} >
                                             <i className="icon-pic"></i>
                                             <span className={(this.state.status == "flight" ? "isActive" : "")}>
-                            法法师次
-                        </span>
+                                                RNG
+                                            </span>
                                         </div>
                                         <div className="hotel order"
                                              onClick={() => {this.handleClick("flightserver")}} >
                                             <i className="icon-pic"></i>
                                             <span className={(this.state.status == "flightserver" ? "isActive" : "")}>
-                            12阿萨
-                        </span>
+                                                EDG
+                                            </span>
                                         </div>
                                     </Panel>
                                 </Collapse>
@@ -248,39 +266,40 @@ class SideMenu extends Component {
                             <div className="order-message">
                                 <img src={require("../../../images/logo.png")} alt=""/>
                             </div>
+                            <div className="client-message" onClick={() => {this.handleClick("client")}}>
+                                运营客商
+                            </div>
                             <div className="sidemenu-order">
-                                <Collapse defaultActiveKey={['1']} onChange={this.callback()}>
-                                    <Panel header="酒店订单" key="1">
+                                <Collapse onChange={this.callback()}>
+                                    <Panel header="售前管理" key="1">
                                         <div className="sale order"
-                                             onClick={() => {this.handleClick("sale")}}
-                                        >
-                        <span className={(this.state.status == "sale" ? "isActive" : "")}>
-                            POST管理
-                        </span>
+                                             onClick={() => {this.handleClick("error")}}>
+                                            <span className={(this.state.status == "error" ? "isActive" : "")}>
+                                                ABC
+                                            </span>
                                         </div>
                                         <div className="server order"
-                                             onClick={() => {this.handleClick("hotelserver")}}
-                                        >
+                                             onClick={() => {this.handleClick("hotelserver")}}>
                                             <i className="icon-people"></i>
                                             <span className={(this.state.status == "hotelserver" ? "isActive" : "")}>
-                            POST管理哈哈
-                        </span>
+                                                SKT
+                                            </span>
                                         </div>
                                     </Panel>
-                                    <Panel header="机票订单" key="2">
+                                    <Panel header="运营销售" key="2">
                                         <div className="hotel order"
                                              onClick={() => {this.handleClick("flight")}} >
                                             <i className="icon-pic"></i>
                                             <span className={(this.state.status == "flight" ? "isActive" : "")}>
-                            发生的方法
-                        </span>
+                                                RNG
+                                            </span>
                                         </div>
                                         <div className="hotel order"
                                              onClick={() => {this.handleClick("flightserver")}} >
                                             <i className="icon-pic"></i>
                                             <span className={(this.state.status == "flightserver" ? "isActive" : "")}>
-                            12史蒂芬孙
-                        </span>
+                                                EDG
+                                            </span>
                                         </div>
                                     </Panel>
                                 </Collapse>
@@ -294,39 +313,40 @@ class SideMenu extends Component {
                             <div className="order-message">
                                 <img src={require("../../../images/logo.png")} alt=""/>
                             </div>
+                            <div className="client-message" onClick={() => {this.handleClick("client")}}>
+                                运营客商
+                            </div>
                             <div className="sidemenu-order">
-                                <Collapse defaultActiveKey={['1']} onChange={this.callback()}>
-                                    <Panel header="酒店订单" key="1">
+                                <Collapse onChange={this.callback()}>
+                                    <Panel header="售前管理" key="1">
                                         <div className="sale order"
-                                             onClick={() => {this.handleClick("sale")}}
-                                        >
-                        <span className={(this.state.status == "sale" ? "isActive" : "")}>
-                            财务对账
-                        </span>
+                                             onClick={() => {this.handleClick("error")}}>
+                                            <span className={(this.state.status == "error" ? "isActive" : "")}>
+                                                ABC
+                                            </span>
                                         </div>
                                         <div className="server order"
-                                             onClick={() => {this.handleClick("hotelserver")}}
-                                        >
+                                             onClick={() => {this.handleClick("hotelserver")}}>
                                             <i className="icon-people"></i>
                                             <span className={(this.state.status == "hotelserver" ? "isActive" : "")}>
-                            财务对账
-                        </span>
+                                                SKT
+                                            </span>
                                         </div>
                                     </Panel>
-                                    <Panel header="机票订单" key="2">
+                                    <Panel header="运营销售" key="2">
                                         <div className="hotel order"
                                              onClick={() => {this.handleClick("flight")}} >
                                             <i className="icon-pic"></i>
                                             <span className={(this.state.status == "flight" ? "isActive" : "")}>
-                            再发生的
-                        </span>
+                                                RNG
+                                            </span>
                                         </div>
                                         <div className="hotel order"
                                              onClick={() => {this.handleClick("flightserver")}} >
                                             <i className="icon-pic"></i>
                                             <span className={(this.state.status == "flightserver" ? "isActive" : "")}>
-                            乖乖
-                        </span>
+                                                EDG
+                                            </span>
                                         </div>
                                     </Panel>
                                 </Collapse>
@@ -340,39 +360,40 @@ class SideMenu extends Component {
                             <div className="order-message">
                                 <img src={require("../../../images/logo.png")} alt=""/>
                             </div>
+                            <div className="client-message" onClick={() => {this.handleClick("client")}}>
+                                运营客商
+                            </div>
                             <div className="sidemenu-order">
-                                <Collapse defaultActiveKey={['1']} onChange={this.callback()}>
-                                    <Panel header="酒店订单" key="1">
+                                <Collapse onChange={this.callback()}>
+                                    <Panel header="售前管理" key="1">
                                         <div className="sale order"
-                                             onClick={() => {this.handleClick("sale")}}
-                                        >
-                        <span className={(this.state.status == "sale" ? "isActive" : "")}>
-                            系统设置
-                        </span>
+                                             onClick={() => {this.handleClick("error")}}>
+                                            <span className={(this.state.status == "error" ? "isActive" : "")}>
+                                                ABC
+                                            </span>
                                         </div>
                                         <div className="server order"
-                                             onClick={() => {this.handleClick("hotelserver")}}
-                                        >
+                                             onClick={() => {this.handleClick("hotelserver")}}>
                                             <i className="icon-people"></i>
                                             <span className={(this.state.status == "hotelserver" ? "isActive" : "")}>
-                            系统设置
-                        </span>
+                                                SKT
+                                            </span>
                                         </div>
                                     </Panel>
-                                    <Panel header="机票订单" key="2">
+                                    <Panel header="运营销售" key="2">
                                         <div className="hotel order"
                                              onClick={() => {this.handleClick("flight")}} >
                                             <i className="icon-pic"></i>
                                             <span className={(this.state.status == "flight" ? "isActive" : "")}>
-                            扣扣
-                        </span>
+                                                RNG
+                                            </span>
                                         </div>
                                         <div className="hotel order"
                                              onClick={() => {this.handleClick("flightserver")}} >
                                             <i className="icon-pic"></i>
                                             <span className={(this.state.status == "flightserver" ? "isActive" : "")}>
-                            老擦拭
-                        </span>
+                                                EDG
+                                            </span>
                                         </div>
                                     </Panel>
                                 </Collapse>
@@ -387,7 +408,7 @@ class SideMenu extends Component {
 
 
 const mapStateToProps = state => ({
-    isModule: state.CommonReducer.isModule,
+    isModule: state.CommonReducer.isModule
 });
 
 

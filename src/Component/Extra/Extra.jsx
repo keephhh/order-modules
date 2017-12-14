@@ -9,6 +9,7 @@ class Extra extends Component {
         super(props, context);
     }
 
+
     render() {
         const {number} = this.props
         const menu = (
@@ -32,7 +33,7 @@ class Extra extends Component {
                             <div className="extra-img">
                                 <img className="extra-message-avatar" src="http://www.ld12.com/upimg358/allimg/20160630/0811446121497071.jpg" alt=""/>
                             </div>
-                            <Dropdown overlay={menu} trigger={['click']}>
+                            <Dropdown overlay={menu} trigger={['click']} >
                                  <span className="ant-dropdown-link" href="#">
                                      黑色星期六 <Icon type="down" />
                                  </span>

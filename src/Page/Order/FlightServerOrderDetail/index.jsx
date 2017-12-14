@@ -18,7 +18,7 @@ class FDetail extends Component {
     }
 
     render() {
-        const options = ['合作商户','内容编辑','财务对账','CRM','配置']
+        const options = ['合作商户','CRM','内容运营','POST管理','财务对账', '系统设置']
 
         const navigation = ['订单管理','机票订单','售后订单','订单详情']
 

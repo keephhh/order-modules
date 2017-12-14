@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import {showflag} from "../../../Action/AppAction"
 import { Menu } from 'antd';
 import Extra from '../../../Component/Extra/Extra'
+import { browserHistory} from 'react-router'
 import {connect} from 'react-redux'
+import {showflag} from "../../../Action/AppAction"
 
 
 import './style.css'
@@ -13,17 +14,38 @@ import './style.css'
 class Head extends Component {
     constructor () {
         super()
-        this.state = {
-            current: 'mail',
-        }
     }
     handleClick = (e) => {
+        localStorage.setItem('status', 'sale')
+        localStorage.setItem('topType', e.key);
         console.log('click ', e.item.props.children);
-        this.setState({
-            current: e.key,
-        });
-        const { dispatch } = this.props
+
+        const {dispatch} = this.props;
         dispatch(showflag(e.item.props.children))
+
+        localStorage.setItem('leftType',e.item.props.children)
+
+        if(e.item.props.children == 'CRM') {
+            browserHistory.push('/client')
+        }
+        if(e.item.props.children == '订单管理') {
+            browserHistory.push('/')
+        }
+        if(e.item.props.children == '合作商户') {
+            browserHistory.push('/cooperative')
+        }
+        if(e.item.props.children == '内容运营') {
+            browserHistory.push('/contentOperation')
+        }
+        if(e.item.props.children == 'POST管理') {
+            browserHistory.push('/post')
+        }
+        if(e.item.props.children == '财务对账') {
+            browserHistory.push('/finance')
+        }
+        if(e.item.props.children == '系统设置') {
+            browserHistory.push('/system')
+        }
     }
 
     render() {
@@ -34,7 +56,7 @@ class Head extends Component {
              <div className="head-navigation">
                  <Menu
                      onClick={this.handleClick}
-                     selectedKeys={[this.state.current]}
+                     selectedKeys={[localStorage.getItem('topType')]}
                      mode="horizontal"
                  >
                      <Menu.Item key="mail">

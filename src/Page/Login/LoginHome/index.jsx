@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import HeaderMenu from '../../../Component/Menu/menu'
+import HeaderMenu from '../../SmartComponent/Menu/Menu'
 import { browserHistory} from 'react-router'
 import {connect} from 'react-redux'
-import {showinit} from "../../../Action/AppAction"
+import {showinit,showflag} from "../../../Action/AppAction"
 import './style.css'
 
 
@@ -12,12 +12,20 @@ class LoginHome extends Component {
     }
 
     componentWillMount() {
+
+        localStorage.setItem('topType', '');
+
         const {dispatch} = this.props;
         dispatch(showinit())
     }
     changeModule (e) {
+        const {dispatch} = this.props;
+        dispatch(showflag(e.item.props.children))
         if (e.item.props.children == '订单管理') {
             browserHistory.push('/')
+        }
+        if (e.item.props.children == 'CRM') {
+            browserHistory.push('/client')
         }
     }
 

@@ -31,7 +31,7 @@ const clearFlightRecord = createAction(CLEAR_FLIGHT_RECORD);
 
 const displayHotel = () => asyncAction('http://t.casino.moreton.cn:8080/lucky/admin/hotel/order/list?action=1',
     searchStart, searchFinish);
-const displayFlight = () => asyncAction('http://t.casino.moreton.cn:8080/lucky/admin/flight/order/list?action=1',
+const displayFlight = () => asyncAction('http://t.casino.moreton.cn:8080/lucky/admin/flight/order/list?action=1&admin_id=1',
     displayStart, displayFinish);
 
 

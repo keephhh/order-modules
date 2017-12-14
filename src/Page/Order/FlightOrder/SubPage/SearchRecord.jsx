@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Record from '../../../SmartComponent/Menu/RecordMenu'
 import { browserHistory} from 'react-router'
+import {getLocalTime} from "../../../../Action/CommonAction"
 import { Table } from 'antd';
 
 
@@ -27,10 +28,6 @@ class SearchRecord extends Component {
         console.log(option)
     }
 
-    getLocalTime (nS) {
-        return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
-    }
-
     handleSearch (e) {
         this.setState({
             currentData: e.item.props.children,
@@ -46,22 +43,22 @@ class SearchRecord extends Component {
         const { record } = this.props;
 
         record.filter((data, key) => {
-            if(data !== '' && data.subOrders[0].status == 3 && this.state.currentData == '待支付') {
+            if(data !== '' && data.orderDetail.status === 2 && this.state.currentData == '待支付') {
                 return recordType.push(data)
             }
-            if(data !== '' && data.subOrders[0].status == 2 && this.state.currentData == '待确认') {
+            if(data !== '' && data.orderDetail.status === 1 && this.state.currentData == '待确认') {
                 return recordType.push(data)
             }
-            if(data !== '' && this.state.currentData == '全部') {
+            if(data !== '' && this.state.currentData === '全部') {
                 return recordType.push(data)
             }
-            if(data !== '' && data.subOrders[0].status == 1 && this.state.currentData == '交易成功') {
+            if(data !== '' && data.orderDetail.status === 3  && this.state.currentData == '交易成功') {
                 return recordType.push(data)
             }
-            if(data !== '' && data.subOrders[0].status == 3 && this.state.currentData == '退款中') {
+            if(data !== '' && data.orderDetail.status === 8 && this.state.currentData == '退款中') {
                 return recordType.push(data)
             }
-            if(data !== '' && data.subOrders[0].status == 2 && this.state.currentData == '其他') {
+            if(data !== '' && data.orderDetail.status === 2 && this.state.currentData == '其他') {
                 return recordType.push(data)
             }
         })
@@ -92,12 +89,12 @@ class SearchRecord extends Component {
             let line = {
                 key: key,
                 number: option.flightOrderId,
-                status: this.statusChange(option.subOrders[0].status),
-                id: this.getLocalTime(option.createTime),
-                kind: option.amount,
+                status: this.statusChange(option.orderDetail.status),
+                id: getLocalTime(option.createTime/1000),
+                kind: option.userId,
                 mobile: option.linkMobile,
-                hotel: option.subOrders[0].flight.companyName ? option.subOrders[0].flight.companyName:'',
-                order: this.getLocalTime(option.updateTime)
+                hotel: option.orderDetail.flights[0]? option.orderDetail.flights[0].companyName : '',
+                order: getLocalTime(option.updateTime/1000)
             }
             options.push(line)
         })
@@ -118,6 +115,9 @@ class SearchRecord extends Component {
                        size="middle"
                        onRowClick={this.handleClick}
                 />
+                {
+                    console.log(recordType)
+                }
             </div>
         );
     }

@@ -7,7 +7,7 @@ import {
 
 
 const initialState = {
-    isModule: '订单管理',
+    isModule: localStorage.getItem('leftType'),
 };
 
 

@@ -20,7 +20,7 @@
     padding-bottom: 15px;
 }
 .widget {
-    width: 26.5%;
+    width: 30%;
     height: 100%;
     background: #FFFFFF;
     margin-top: 15px;
@@ -92,9 +92,16 @@ flight-log-box
     line-height: 35px;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-size: 14px;
 }
 .widget>span>label {
     color: blue;
     display: inline-block;
     margin-right: 20px;
+}
+.widget-descript_order {
+    color: rgb(103, 169, 236);
+}
+.ant-checkbox-wrapper + span, .ant-checkbox + span {
+    font-size: 12px;
 }

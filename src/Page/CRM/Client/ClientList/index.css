@@ -1,0 +1,232 @@
+.client-type {
+    width: 96%;
+    height: 144px;
+    background-color: #FFFFFF;
+    margin: 2%;
+    box-shadow: 0 2px 4px 0
+}
+.client-type-title {
+    width: 100%;
+    background: #FAFAFA;
+    border-radius: 2px 2px 0 0;
+    font-size: 14px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 16px;
+    padding: 10px 20px;
+}
+.client-option {
+    font-family: PingFangSC-Regular;
+    opacity: .8;
+    padding: 10px 20px 16px 20px;
+    font-size: 14px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 26px;;
+}
+.option-line> span {
+    margin-right: 30px;
+}
+
+.client-list {
+    padding: 20px;
+    width: 96%;
+    height: 580px;
+    background-color: #FFFFFF;
+    margin: 2%;
+    box-shadow: 0 2px 4px 0
+}
+
+/*  ant design sign  */
+
+.ant-pagination-item-active {
+    background-color: #C8A377;
+    border-color: #C8A377;
+}
+.ant-pagination-item-active:hover, .ant-pagination-item-active:hover:focus {
+    background-color: #C8A377;
+}
+.ant-pagination-item-active:focus, .ant-pagination-item-active:hover {
+    background-color: #C8A377;
+    border-color: #C8A377;
+}
+/*   ******      */
+
+.mask-page {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: .3;
+}
+.fixed-add {
+    position: fixed;
+    width: 512px;
+    height: 348px;
+    left: 50%;
+    top: 50%;
+    background-color: #FFFFFF;
+    z-index: 100;
+    margin:-174px 0 0 -266px;
+}
+.fixed-add-header {
+    width: 100%;
+    height: 34px;
+    background: #FAFAFA;
+    line-height: 34px;
+}
+.fixed-add-item{
+    font-size: 14px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 14px;
+    padding-left: 20px;
+}
+.fixed-add-header>label {
+    font-size: 12px;
+    color: #999999;
+    letter-spacing: 0;
+    line-height: 14px;
+}
+.fixed-add-content {
+    padding: 20px 85px;
+    color: #333333;
+}
+.fixed-flex-box {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}
+.fixed-flex-input {
+    width: 244px;
+    height: 28px;
+    border: 1px solid #C3C3C3;
+}
+.noneBorder {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+.fixed-flex-number {
+    width: 160px;
+    height: 26px;
+    border: 1px solid #C3C3C3;
+}
+.ant-content>.ant-select-enabled {
+    width: 72px!important;
+    margin-right: 10px;
+}
+.fixed-flex-input>.ant-select-enabled {
+    width: 242px!important;
+    margin-right: 10px;
+    border: none;
+}
+.fixed-flex-input .ant-select-selection {
+    border:none;
+    width: 100%;
+    height: 100%;
+}
+
+.fixed-button-area {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.fixed-button-prevent, .fixed-button-cancle {
+    width: 120px;
+    height: 36px;
+    border: 1px solid #EAC694;
+    box-shadow: 0 2px 2px 0 rgba(200,163,119,0.30);
+    text-align: center;
+    line-height: 36px;
+    border-radius: 2px;
+    font-size: 14px;
+}
+.fixed-button-prevent{
+    background: #C8A377;
+    color: #FFFFFF;
+}
+.fixed-button-cancle {
+    background: #FFFFFF;
+    color: #C8A377;
+}
+/*   ******   */
+input::-webkit-input-placeholder {
+    font-size: 12px;
+    color: #C3C3C3;
+    font-weight: 300
+}
+
+.back-option {
+    width: 96px;
+    height: 20px;
+    background: #FFFFFF;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.20);
+    border-radius: 2px;
+    font-size: 12px;
+    color: #C8A377;
+    line-height: 20px;
+}
+.isSearch-content {
+    display: flex;
+    padding: 20px;
+}
+.isSearch-item {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: flex-end;
+}
+.isSearch-item> span {
+    display: flex;
+    align-items: center;
+}
+.isSearch-cut-left {
+    flex: 1.5;
+}
+.isSearch-cut-mid {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+.isSearch-cut-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.isSearch-input> input {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+.isSearch-input {
+    width: 120px;
+    height: 26px;
+    border: 1px solid #C3C3C3;
+}
+.line-input {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.isSearch-button-search, .isSearch-button-cancle {
+    width: 100px;
+    height: 26px;
+    border: 1px solid #EAC694;
+    box-shadow: 0 2px 2px 0 rgba(200,163,119,0.30);
+    text-align: center;
+    line-height: 26px;
+    border-radius: 2px;
+    font-size: 14px;
+}
+.isSearch-button-search {
+    background: #C8A377;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+.isSearch-button-cancle {
+    background: #FFFFFF;
+    color: #C8A377;
+}

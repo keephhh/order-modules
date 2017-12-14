@@ -21,8 +21,7 @@
 
 
 .search-left {
-    width:13%;
-    min-width: 180px;
+    width: 180px;
     opacity: 1;
     background: #333333;
     height: 100%;
@@ -65,6 +64,19 @@
 }
 .isActive {
     color: #EAC694;
+}
+
+.client-message {
+    width: 180px;
+    height: 40px;
+    background-color: #C8A377;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 40px;
+    padding-left: 20px;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+   padding: 15px;
 }
 
 

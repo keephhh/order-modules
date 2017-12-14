@@ -100,6 +100,9 @@ class SearchRecord extends Component {
                        dataSource={options}
                        size="middle"
                        onRowClick={this.handleClick} />
+                {
+                    console.log(recordType)
+                }
             </div>
 
         );

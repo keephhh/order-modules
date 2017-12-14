@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
 import HotelOrderReducer from './HotelOrderReducer';
-import CommonReducer from './CommonReducer'
+import CommonReducer from '../CommonReducer'
 import FlightOrderReducer from './FlightOrderReducer'
 
 const oReducer = combineReducers({

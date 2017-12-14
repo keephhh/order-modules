@@ -16,6 +16,7 @@ class Head extends Component {
             current: e.key,
         });
         this.props.changeModule(e)
+
     }
     render() {
 

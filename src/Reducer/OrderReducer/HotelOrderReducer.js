@@ -1,8 +1,14 @@
 import { handleActions } from 'redux-actions';
+
 import {
-    CHANGE_FLIGHT_VALUE,
-    CLEAR_FLIGHT_RECORD
-} from '../Action/OrderAction';
+    SEARCH_FINISH,
+    SEARCH_START,
+    DISPLAY_START,
+    DISPLAY_FINISH,
+    CHANGE_VALUE,
+    CLEAR_HOTEL_RECORD,
+} from '../../Action/OrderAction';
+
 
 const initialState = {
     list: [],
@@ -16,7 +22,20 @@ const initialState = {
 };
 
 export default handleActions({
-    [CHANGE_FLIGHT_VALUE]: (state, action) => {
+    [SEARCH_START]: (state) => {
+        return {...state};
+    },
+    [SEARCH_FINISH]: (state, action) => {
+        return {...state, list: action.payload.page_list};
+    },
+
+    [DISPLAY_START]: (state) => {
+        return {...state};
+    },
+    [DISPLAY_FINISH]: (state, action) => {
+        return {...state, flight: action.payload.page_list};
+    },
+    [CHANGE_VALUE]: (state, action) => {
         return {
             ...state,
             orderId:action.payload.orderId,
@@ -25,12 +44,12 @@ export default handleActions({
             hotelName:action.payload.hotelName,
         }
     },
-    [CLEAR_FLIGHT_RECORD]: (state) => {
+    [CLEAR_HOTEL_RECORD]: (state) => {
         return {...state,
             orderId: initialState.orderId,
             reservedPhone: initialState.reservedPhone,
             userId: initialState.userId,
+            hotelName: initialState.hotelName
         };
     },
-
 }, initialState);

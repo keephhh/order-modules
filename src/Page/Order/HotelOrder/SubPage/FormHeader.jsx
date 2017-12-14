@@ -45,6 +45,7 @@ class Head extends Component {
                         <input
                             className="search-input"
                             value={this.props.reservedPhone}
+
                             onChange={this.handleChange.bind(this)}
                             ref='b'
                         />

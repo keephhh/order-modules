@@ -46,12 +46,13 @@
 1111
 */
 .selector {
-  margin-right: 0;
+  margin-right: 20px;
 }
 
 .ant-btn-primary:hover, .ant-btn-primary:focus {
   background-color: #C8A377;
   color: #FFFFFF;
+  border-color: #C8A377;
 }
 .ant-btn:hover {
   color: #C8A377;
@@ -86,8 +87,10 @@
 .ant-btn-primary {
   color: #fff;
   background-color: #C8A377;
-  border-color: #1DA57A;
   border-radius: 2px;
+}
+.ant-btn-primary:focus {
+  border-color: #C8A377;
 }
 
 /*
@@ -118,6 +121,161 @@
   width: 240px;
   height: 30px;
 }
+.fixed-create {
+  width: 388px;
+  min-height: 356px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background-color: #FFFFFF;
+  z-index: 100;
+  margin:-174px 0 0 -194px;
+}
+.fixed-create-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 22px;
+  padding-right: 18px;
+  line-height: 34px;
+  font-size: 14px;
+  background: #FAFAFA
+}
+.fixed-create-header>span {
+  color: #333333;
+}
+.fixed-create-header>div {
+  width: 64px;
+  height: 24px;
+  background: #FFFFFF;
+  text-align: center;
+  line-height: 24px;
+  font-size: 14px;
+  color: #C8A377;
+  letter-spacing: 0;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.20);
+  border-radius: 2px;
+}
+.fixed-create-content {
+  padding: 13px 18px 20px 22px;
+  min-height: 260px;
+}
+.fixed-create-flex {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.fixed-create-flex>span {
+  margin-right: 12px;
+  font-size: 14px;
+  color: #333333;
+}
+.fixed-create-flex-item, .fixed-create-flex-item2 {
+  width: 191px;
+  border-bottom: 2px solid #D2D2D2;
+  padding-bottom: 3px;
+}
+.fixed-create-flex-item>input {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.fixed-create-flex-item2>input {
+  width: 48%;
+  height: 100%;
+  border: none;
+}
+.fixed-create-flex .ant-calendar-picker-input {
+  width: 100px;
+}
+.date-line {
+  position: relative;
+  width: 11px;
+  height: 3px;
+  background: #D2D2D2;;
+  margin-left: 30px;
+}
+.fixed-create-footer {
+  padding-left: 22px;
+  padding-right: 18px;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+.fixed-create-footer> div {
+  width: 104px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+}
+.fixed-create-button-next {
+  background: #C8A377;
+  box-shadow: 0 2px 2px 0 rgba(200,163,119,0.30);
+  border-radius: 2px;
+  color: #FFFFFF;
+}
+.fixed-create-button-last {
+  background: #FFFFFF;
+  box-shadow: 0 2px 2px 0 rgba(200,163,119,0.30);
+  border: 1px solid #C8A377;
+  border-radius: 2px;
+  color: #C8A377;
+}
+.fixed-create-flex>label {
+  font-size: 14px;
+}
+.fixed-create-item-line {
+  border-bottom: 1px solid #F4F3F4;
+  margin-bottom: 12px;
+}
+.fixed-create-people {
+  height: 185px;
+  width: 100%;
+  overflow-y: auto
+}
+.margin-right {
+  margin-right: 40px;
+}
+.fixed-create-flex-iphone1 {
+  width: 40px;
+  border-bottom: 2px solid #D2D2D2;
+  padding-bottom: 3px;
+}
+.fixed-create-flex-iphone2 {
+  width: 140px;
+  border-bottom: 2px solid #D2D2D2;
+  padding-bottom: 3px;
+}
+.fixed-create-flex-iphone1>input, .fixed-create-flex-iphone2>input {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.iphone-line {
+  margin: auto 10px;
+  width: 11px;
+  height: 3px;
+  background: #D2D2D2;;
+}
+.label-collection {
+  font-size: 14px;
+}
+.label-collection>label:nth-child(1) {
+  margin-right: 20px;
+}
+.hotel-pay-detail {
+  width: 170px;
+  font-size: 14px;
+}
+.pay-detail-item {
+  width: 100%;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 
 

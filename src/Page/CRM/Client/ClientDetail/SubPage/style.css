@@ -1,0 +1,147 @@
+.index-client-mes {
+    margin-top: 8px;
+}
+.navigation-mes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: #F7F7F7;
+    padding-left: 10px;
+}
+.navigation-mes span {
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 5px 30px 5px 5px;
+}
+.message-display {
+    margin-top: 20px;
+}
+.message-display-title {
+    font-size: 14px;
+    color: #C8A377;
+    letter-spacing: 0;
+    display: inline-block;
+}
+.message-display-title>label {
+    font-size: 12px;
+    color: #999999;
+    letter-spacing: 0;
+}
+.message-display-title:before {
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+    top: 2px;
+    width: 4px;
+    height: 20px;
+    background-color: #C8A377;
+}
+.message-input {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+.input-item-float {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 33%;
+    margin-top: 15px;
+}
+.input-item-float-line {
+    padding-left: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 80%;
+    margin-top: 15px;
+}
+.input-item-float_width {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 49.5%;
+    margin-top: 15px;
+}
+.input-collection {
+    width: 150px;
+    height: 26px;
+    border:1px solid #C3C3C3;
+}
+
+.input-collection_width {
+    width: 300px;
+    height: 26px;
+    border:1px solid #C3C3C3;
+}
+.clear-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.must {
+    display: inline-block;
+    margin-right: 5px;
+    color: #E51D1F;
+}
+.write {
+    margin-right: 10px;
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background-color: #FFFFFF;
+    color: #C8A377;
+    letter-spacing: 0;
+}
+.client-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    color: #C8A377;
+}
+.client-select-item {
+    margin-left: 10px;
+}
+.account-table, .order-table, .transCoding-table, .integral-table, .serverLog-table {
+    margin-top: 5px;
+}
+.navigation-mes>.span>label {
+    margin-right: 10px;
+}
+.display-mes {
+    display: flex;
+    width: 100%;
+    background: #F7F7F7;
+    line-height: 34px;
+    padding-left: 10px;
+}
+.left-item {
+    display: flex;
+}
+.search-time-span {
+    margin-right: 15px!important;
+    color: #666666;
+}
+.search-time-item {
+    display: flex;
+}
+
+.search-time-line {
+    margin: auto 10px;
+}
+.search-time-input {
+    border: none;
+    display: inline-block;
+    width: 108px;
+    height: 26px;
+}
+.display-search-right>span {
+    display: inline-block;
+    margin-left: 40px;
+}
+.isFilterActive {
+    background-color: #000000;
+    color: #FFFFFF;
+}
